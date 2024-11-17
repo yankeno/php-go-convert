@@ -1,0 +1,11 @@
+services:
+  app:
+    image: php-go-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/src
+    stdin_open: true
+    tty: true
+    command: /bin/sh
